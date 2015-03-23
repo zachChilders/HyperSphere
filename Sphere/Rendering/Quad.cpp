@@ -38,3 +38,15 @@ void Quad::Create()
 	this->vao = vao;
 	this->vbos.push_back(vbo);
 }
+
+void Quad::Draw()
+{
+	glUseProgram(program);
+	glBindVertexArray(vao);
+	glDrawArrays(GL_TRIANGLE_STRIP, 0, 4);
+}
+
+void Quad::Update()
+{
+
+}

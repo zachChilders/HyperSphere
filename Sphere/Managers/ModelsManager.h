@@ -3,6 +3,7 @@
 #include "ShaderManager.h"
 #include "..\Rendering\IGameObject.h"
 #include "..\Rendering\Triangle.h"
+#include "..\Rendering\\Quad.h"
 
 using namespace Rendering;
 namespace Managers

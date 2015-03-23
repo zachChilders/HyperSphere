@@ -10,7 +10,10 @@ Managers::ModelsManager::ModelsManager()
 	triangle->Create();
 	gameModelList["triangle"] = triangle;
 
-	
+	Models::Quad* quad = new Models::Quad();
+	quad->SetProgram(ShaderManager::GetShader("colorShader"));
+	quad->Create();
+	gameModelList["quad"] = quad;
 }
 
 Managers::ModelsManager::~ModelsManager()
