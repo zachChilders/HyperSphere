@@ -2,7 +2,7 @@
 
 #include "GL\glew.h"
 #include "GL\freeglut.h"
-#include "VertexFormat.h"
+#include "Rendering\VertexFormat.h"
 #include <vector>
 #include <map>
 

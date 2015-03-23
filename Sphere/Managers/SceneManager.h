@@ -1,6 +1,7 @@
 #pragma once
 
 #include "ShaderManager.h"
+#include "ModelsManager.h"
 #include "IListener.h"
 
 namespace Managers
@@ -21,6 +22,7 @@ namespace Managers
 
 		private:
 			ShaderManager* shaderManager;
+			ModelsManager* modelsManager;
 	};
 }
 

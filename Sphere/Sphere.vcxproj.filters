@@ -22,8 +22,14 @@
     <Filter Include="Core\Init">
       <UniqueIdentifier>{6b7ea203-0107-46f3-b591-0db2321ca078}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Core\Manager">
+    <Filter Include="Rendering">
+      <UniqueIdentifier>{4de4b8c0-63c7-4a9a-b520-c886fb387385}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Manager">
       <UniqueIdentifier>{bbe9f7bd-5a05-4781-84e7-45ee4d163cd5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Rendering\Models">
+      <UniqueIdentifier>{07fe70aa-63fb-4cb1-9cb7-46bdc0aa72d1}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -39,52 +45,73 @@
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="GameModels.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="InitGlut.cpp">
+    <ClCompile Include="Core\InitGlew.cpp">
       <Filter>Core\Init</Filter>
     </ClCompile>
-    <ClCompile Include="InitGlew.cpp">
+    <ClCompile Include="Core\InitGlut.cpp">
       <Filter>Core\Init</Filter>
     </ClCompile>
-    <ClCompile Include="ShaderManager.cpp">
-      <Filter>Core\Manager</Filter>
+    <ClCompile Include="Managers\SceneManager.cpp">
+      <Filter>Manager</Filter>
     </ClCompile>
-    <ClCompile Include="SceneManager.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="Managers\ShaderManager.cpp">
+      <Filter>Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="Rendering\Triangle.cpp">
+      <Filter>Rendering\Models</Filter>
+    </ClCompile>
+    <ClCompile Include="Managers\ModelsManager.cpp">
+      <Filter>Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="Rendering\Model.cpp">
+      <Filter>Rendering\Models</Filter>
+    </ClCompile>
+    <ClCompile Include="Rendering\Quad.cpp">
+      <Filter>Rendering\Models</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="VertexFormat.h">
-      <Filter>Core</Filter>
-    </ClInclude>
-    <ClInclude Include="GameModels.h">
-      <Filter>Core</Filter>
-    </ClInclude>
     <ClInclude Include="WindowInfo.h">
       <Filter>Core\Init</Filter>
     </ClInclude>
     <ClInclude Include="ContextInfo.h">
       <Filter>Core\Init</Filter>
     </ClInclude>
-    <ClInclude Include="FramebufferInfo.h">
+    <ClInclude Include="IGameObject.h">
+      <Filter>Rendering</Filter>
+    </ClInclude>
+    <ClInclude Include="VertexFormat.h">
+      <Filter>Rendering</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\FramebufferInfo.h">
       <Filter>Core\Init</Filter>
     </ClInclude>
-    <ClInclude Include="InitGlew.h">
+    <ClInclude Include="Core\InitGlew.h">
       <Filter>Core\Init</Filter>
     </ClInclude>
-    <ClInclude Include="InitGlut.h">
+    <ClInclude Include="Core\InitGlut.h">
       <Filter>Core\Init</Filter>
     </ClInclude>
-    <ClInclude Include="IListener.h">
-      <Filter>Core\Init</Filter>
+    <ClInclude Include="Managers\IListener.h">
+      <Filter>Manager</Filter>
     </ClInclude>
-    <ClInclude Include="ShaderManager.h">
-      <Filter>Core\Manager</Filter>
+    <ClInclude Include="Managers\SceneManager.h">
+      <Filter>Manager</Filter>
     </ClInclude>
-    <ClInclude Include="SceneManager.h">
-      <Filter>Core\Manager</Filter>
+    <ClInclude Include="Managers\ShaderManager.h">
+      <Filter>Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="Model.h">
+      <Filter>Rendering\Models</Filter>
+    </ClInclude>
+    <ClInclude Include="Rendering\Triangle.h">
+      <Filter>Rendering\Models</Filter>
+    </ClInclude>
+    <ClInclude Include="Managers\ModelsManager.h">
+      <Filter>Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="Rendering\Quad.h">
+      <Filter>Rendering\Models</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

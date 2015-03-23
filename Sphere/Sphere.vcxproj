@@ -79,22 +79,29 @@
     <None Include="Shaders\VertexShader.glsl" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="GameModels.cpp" />
-    <ClCompile Include="InitGlew.cpp" />
-    <ClCompile Include="InitGlut.cpp" />
+    <ClCompile Include="Core\InitGlew.cpp" />
+    <ClCompile Include="Core\InitGlut.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="SceneManager.cpp" />
-    <ClCompile Include="ShaderManager.cpp" />
+    <ClCompile Include="Managers\ModelsManager.cpp" />
+    <ClCompile Include="Managers\SceneManager.cpp" />
+    <ClCompile Include="Managers\ShaderManager.cpp" />
+    <ClCompile Include="Rendering\Model.cpp" />
+    <ClCompile Include="Rendering\Quad.cpp" />
+    <ClCompile Include="Rendering\Triangle.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ContextInfo.h" />
-    <ClInclude Include="FramebufferInfo.h" />
-    <ClInclude Include="GameModels.h" />
-    <ClInclude Include="IListener.h" />
-    <ClInclude Include="InitGlew.h" />
-    <ClInclude Include="InitGlut.h" />
-    <ClInclude Include="SceneManager.h" />
-    <ClInclude Include="ShaderManager.h" />
+    <ClInclude Include="Core\FramebufferInfo.h" />
+    <ClInclude Include="Core\InitGlew.h" />
+    <ClInclude Include="Core\InitGlut.h" />
+    <ClInclude Include="IGameObject.h" />
+    <ClInclude Include="Managers\IListener.h" />
+    <ClInclude Include="Managers\ModelsManager.h" />
+    <ClInclude Include="Managers\SceneManager.h" />
+    <ClInclude Include="Managers\ShaderManager.h" />
+    <ClInclude Include="Model.h" />
+    <ClInclude Include="Rendering\Quad.h" />
+    <ClInclude Include="Rendering\Triangle.h" />
     <ClInclude Include="VertexFormat.h" />
     <ClInclude Include="WindowInfo.h" />
   </ItemGroup>

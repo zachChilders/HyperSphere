@@ -1,10 +1,10 @@
 #pragma once
-#include "ContextInfo.h"
+#include "..\Core\ContextInfo.h"
 #include "FramebufferInfo.h"
-#include "WindowInfo.h"
+#include "..\Core\WindowInfo.h"
 #include <iostream>
 #include "InitGlew.h"
-#include "IListener.h"
+#include "..\Managers\IListener.h"
 
 namespace Core
 {
