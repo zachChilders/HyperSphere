@@ -2,6 +2,9 @@
 
 using namespace Core::Init;
 
+Core::IListener* InitGlut::listener = NULL;
+Core::WindowInfo InitGlut::windowInformation;
+
 void InitGlut::init(const Core::WindowInfo& windowInfo,
 					const Core::ContextInfo& contextInfo,
 					const Core::FramebufferInfo& framebufferInfo)
@@ -29,7 +32,7 @@ void InitGlut::init(const Core::WindowInfo& windowInfo,
 
 	glutCreateWindow(windowInfo.name.c_str());
 
-	std::cout << "GLUT:initialized" << std::endl;
+	std::cout << "GLUT: Initialized" << std::endl;
 
 	glutIdleFunc(idleCallback);
 	glutCloseFunc(closeCallback);
@@ -63,13 +66,30 @@ void Core::Init::InitGlut::idleCallback(void)
 
 void Core::Init::InitGlut::displayCallback(void)
 {
-	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-	glClearColor(0.0, 0.0, 0.0, 1.0);
+	listener->notifyBeginFrame();
+	listener->notifyDisplayFrame();
+
 	glutSwapBuffers();
+
+	listener->notifyEndFrame();
 }
 
 void Core::Init::InitGlut::reshapeCallback(int width, int height)
 {
+	if (windowInformation.isReshapable)
+	{
+		if (listener)
+		{
+			listener->notifyReshape(width,
+									height,
+									windowInformation.width,
+									windowInformation.height);
+		}
+
+		windowInformation.width = width;
+		windowInformation.height = height;
+	}
+
 }
 
 void Core::Init::InitGlut::closeCallback()
@@ -99,4 +119,9 @@ void Core::Init::InitGlut::printOpenGLInfo(const Core::WindowInfo & windowInfo, 
 	std::cout << "GLUT:\tRenderer : " << renderer << std::endl;
 	std::cout << "GLUT:\tOpenGl version: " << version << std::endl;
 
+}
+
+void Core::Init::InitGlut::setListener(Core::IListener*& iListener)
+{
+	listener = iListener;
 }

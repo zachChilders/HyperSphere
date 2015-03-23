@@ -11,6 +11,7 @@
 #include "ShaderManager.h"
 #include "GameModels.h"
 #include "InitGlut.h"
+#include "SceneManager.h"
 
 using namespace std;
 
@@ -61,7 +62,11 @@ int main(int argc, char **argv)
 	FramebufferInfo frameBufferInfo(true, true, true, true);
 	InitGlut::init(window, context, frameBufferInfo);
 
-	InitGlut::run();
+	IListener* scene = new Managers::SceneManager();
+	Init::InitGlut::setListener(scene);
 
+	InitGlut::run();
+	
+	delete scene;
 	return 0;
 }

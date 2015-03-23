@@ -2,15 +2,19 @@
 
 #include "glm\glm.hpp"
 
-struct VertexFormat
+namespace Rendering
 {
-	glm::vec4 position;
-	glm::vec4 color;
-
-	VertexFormat(const glm::vec4 &pos, const glm::vec4 &rgba)
+	struct VertexFormat
 	{
-		position = pos;
-		color = rgba;
-	}
+		glm::vec4 position;
+		glm::vec4 color;
 
-};
+		VertexFormat(const glm::vec4 &pos, const glm::vec4 &rgba)
+		{
+			position = pos;
+			color = rgba;
+		}
+
+		VertexFormat() {}
+	};
+}

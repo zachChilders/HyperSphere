@@ -83,14 +83,17 @@
     <ClCompile Include="InitGlew.cpp" />
     <ClCompile Include="InitGlut.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="SceneManager.cpp" />
     <ClCompile Include="ShaderManager.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ContextInfo.h" />
     <ClInclude Include="FramebufferInfo.h" />
     <ClInclude Include="GameModels.h" />
+    <ClInclude Include="IListener.h" />
     <ClInclude Include="InitGlew.h" />
     <ClInclude Include="InitGlut.h" />
+    <ClInclude Include="SceneManager.h" />
     <ClInclude Include="ShaderManager.h" />
     <ClInclude Include="VertexFormat.h" />
     <ClInclude Include="WindowInfo.h" />

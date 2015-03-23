@@ -22,6 +22,9 @@
     <Filter Include="Core\Init">
       <UniqueIdentifier>{6b7ea203-0107-46f3-b591-0db2321ca078}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Core\Manager">
+      <UniqueIdentifier>{bbe9f7bd-5a05-4781-84e7-45ee4d163cd5}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -39,14 +42,17 @@
     <ClCompile Include="GameModels.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="ShaderManager.cpp">
-      <Filter>Core</Filter>
-    </ClCompile>
     <ClCompile Include="InitGlut.cpp">
       <Filter>Core\Init</Filter>
     </ClCompile>
     <ClCompile Include="InitGlew.cpp">
       <Filter>Core\Init</Filter>
+    </ClCompile>
+    <ClCompile Include="ShaderManager.cpp">
+      <Filter>Core\Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneManager.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -54,9 +60,6 @@
       <Filter>Core</Filter>
     </ClInclude>
     <ClInclude Include="GameModels.h">
-      <Filter>Core</Filter>
-    </ClInclude>
-    <ClInclude Include="ShaderManager.h">
       <Filter>Core</Filter>
     </ClInclude>
     <ClInclude Include="WindowInfo.h">
@@ -73,6 +76,15 @@
     </ClInclude>
     <ClInclude Include="InitGlut.h">
       <Filter>Core\Init</Filter>
+    </ClInclude>
+    <ClInclude Include="IListener.h">
+      <Filter>Core\Init</Filter>
+    </ClInclude>
+    <ClInclude Include="ShaderManager.h">
+      <Filter>Core\Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="SceneManager.h">
+      <Filter>Core\Manager</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
